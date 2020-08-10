@@ -47,3 +47,12 @@ Dirección IP (Interna, del router): 192.168.100.151
 Dirección IP (Externa, del ISP): 181.43.56.30
 
 Proveedor internet: Entel Chile
+
+
+
+Desempeño MATMUL:
+Los graficos difieren principalmente en los tiempos requeridos para hacer las multiplicaciones de las matrices. 
+Probablemente esto sea producto de las diferencias en los procesadores.
+Es lineal porque se utiliza la memoria RAM que funciona de manera mas dinamica, almacenando de a poco para ser utilizado a la brevedad.
+Se esta utilizando la version de python 3.8.5 y version de numypy 1.19.1
+Al correr el programa se utiliza un solo procesador, se puede ver en el archivo adjuntado con nombre "procesador.PNG".
