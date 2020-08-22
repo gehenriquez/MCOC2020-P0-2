@@ -64,3 +64,18 @@ Proveedor internet: Entel Chile
 - se observa una gran variacion de los desempeños de los diferentes solvers a medida que cambian los tamaños de matrices, pero al llegar a matrices de 1000x1000 se empiezan a comportar de manera relativamente parecida.
 - Es dificil determinar cual es el con peor desempeño, pero po lo general es el solver de scipy solve.
 Además es interesante la variacion en el rendimiento del solve spSolve symmetric, ya que varia significativamente en comparacion a lops demas al cambiar los tamaños dew matrices.
+
+# Matrices dispersas y complejidad computacional :
+
+1- Complejidad algoritmica de MATMUL:
+- 
+- 
+- 
+2- Complejidad algoritmica de SOLVE:
+- 
+- 
+- 
+3- Complejidad algoritmica de INV:
+- 
+- 
+- 
