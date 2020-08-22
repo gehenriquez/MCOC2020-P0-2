@@ -83,7 +83,7 @@ Además es interesante la variacion en el rendimiento del solve spSolve symmetri
 
 3- Complejidad algoritmica de INV:
 ![Para INV llena](https://github.com/gehenriquez/MCOC2020-P0/blob/master/Entrega%207/INV_llena.png)
-![Para INV dispersa](https://github.com/gehenriquez/MCOC2020-P0/blob/master/Entrega%207/INV_dispersa.png)
+![Para INV disperesa](https://github.com/gehenriquez/MCOC2020-P0/blob/master/Entrega%207/INV_dispersa.png)
 -Para el caso de INV, se aprecia que los tiempos no aumentan tanto como en los otros casos al trabajar con amtrices mas grandes, para ninguno de los casos. Se observa mas pendiente en las matrices llenas y mas aun en el tiempo de solucion que en el de ensamblaje, pero sigue siendo menor que para los otros metodos. 
 - Extrañamente el tiempo que se demora en ensamblar y en resolver una matriz llena parece ser menor que el requerido para una dispersa. 
 - Se aprecia una gran estabilidad, podriamos mdecir que es el metodo ams estable. 
