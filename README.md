@@ -1,61 +1,78 @@
 # MCOC2020-P0
 Mi computador principal
 
-Marca/modelo: Hp Pavilion Gaming Laptop 15-cx0xxx
+Marca/modelo: Hp Pavilion Gaming Laptop 15-dk0xxx
 
 Tipo: Notebook
 
-Año adquisición: 2018
+Año adquisición: 2020
 
-Procesador:
-- Marca/Modelo: Intel Core i5-8300H
-- Velocidad Base: 2.30 GHz
-- Velocidad Máxima: 4.00 GHz
-- Numero de núcleos: 4
-- Humero de hilos: 8
-- Arquitectura: x64-based PC
-- Set de instrucciones: 64-bit
+Procesador: 
+      -Marca/Modelo: Intel Core i7-9750H
+      -Velocidad Base: 2.60 GHz
+      -Velocidad Máxima: 4.50 GHz
+      -Numero de núcleos: 6
+      -Numero de subprocesos: 12
+      -Arquitectura: Coffe Lake H (64 bits)
+      -Set de instrucciones: MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, EM64T, VT-X, AES, AVX, AVX2, FMA3
 
 Tamaño de las cachés del procesador
-- L1d: 32KB
-- L1i: 32KB
-- L2: 256KB
-- L3: 8192KB
+      -L1d: 32KB  
+      -L1i: 32KB  
+      -L2: 256KB   
+      -L3: 12288KB
 
 Memoria
-- Total: 8 GB
-- Tipo memoria: DDR4-2666, LPDDR3-2133
-- Velocidad 1330 MHz
-- Numero de (SO)DIMM: 4.
+      -Total: 16 GB
+      -Tipo memoria: DDR4-2667, LPDDR3-2133
+      -Velocidad 2666 MHz
+      -Numero de (SO)DIMM: 6
       
 Tarjeta Gráfica
-- Marca / Modelo: Nvidia GeForce GTX 1050
-- Memoria dedicada: 8192 MB
-- Resolución: 1920 x 1080
+      -Marca / Modelo: Nvidia GeForce GTX 1660 Ti Max-Q
+      -Memoria dedicada: 6 GB
+      -Resolución: 1920 x 1080
       
 Disco 1:
-- Marca: Seagate Mobile
-- Tipo: HDD
-- Tamaño: 1TB
-- Particiones: 4
-- Sistema de archivos: EXT4.
+      -Marca: Toshiba
+      -Tipo: SSD
+      -Tamaño: 128 GB
+      -Particiones: 4
+      -Sistema de archivos: NTFS
+      
+Disco 2:
+      -Marca: Western Digital
+      -Tipo: SATA 3
+      -Tamaño: 1TB
+      -Sistema de archivos: NTFS
 
-Dirección MAC de la tarjeta wifi: 74:40:BB:38:7F:83
+Dirección MAC de la tarjeta wifi: 5C-3A-45-A0-52-15
 
-Dirección IP (Interna, del router): 192.168.100.151
+Dirección IP (Interna, del router): 172.24.23.1
 
-Dirección IP (Externa, del ISP): 181.43.56.30
+Dirección IP (Externa, del ISP): 172.24.23.135
 
-Proveedor internet: Entel Chile
+Proveedor internet: roma-penuelas-lapaloma.wifixtreme.cl
 
 
 
 # Desempeño MATMUL:
+![Para 10 Corridas](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%202/Plot-10-corridas.png)
 - Los graficos difieren principalmente en los tiempos requeridos para hacer las multiplicaciones de las matrices. 
+
 - Probablemente esto sea producto de las diferencias en los procesadores.
+
 - Es lineal porque se utiliza la memoria RAM que funciona de manera mas dinamica, almacenando de a poco para ser utilizado a la brevedad.
+
 - Se esta utilizando la version de python 3.8.5 y version de numypy 1.19.1
-- Al correr el programa se utiliza un solo procesador, se puede ver en el archivo adjuntado con nombre "procesador.PNG".
+
+- Al correr el programa se utiliza un solo procesador.
+![CPU](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%202/CPU-10-corrida.2.PNG)
+
+
+
+EL comportamiento que se observa es mas lineal y esto podria ocurrir producto de la memoria requerid, de hecho al observar el segundo grafico se ve como aumenta para todas las multiplicaciones el uso de mmemoria. Al requerir mas memoria es probable que el procesador no sea capaz de suplir la demanda de memoria de manera dinamica y requiera utilizar mas RAM o en su defecto memoria de disco, por medio de archivos de paginacion.
+Nuevamente se utiliza solo un procesador. Las imagenes fueron agregadas con nombre "plot_mimatmul.png" correspondiente al ploteo entregado por el programa y "procesador_mimatmul.png" para mostrar el funcionamiento del procesador. Además se subio el archivo "mimatmul.py" y los archivos "matmulp{n}.txt" para los 10 archivos de texto (n con valores entre 0 y 9).
 
 # Desempeño Ax = b :
 - Para matrices de pequeños tamaños el solver que utiliza menos tiempo es el de numpy, para matrices de menos de 10x10. 
