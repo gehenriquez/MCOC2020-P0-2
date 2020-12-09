@@ -8,43 +8,43 @@ Tipo: Notebook
 Año adquisición: 2020
 
 Procesador:
-        -Marca/Modelo: Intel Core i7-9750H
-        -Velocidad Base: 2.60 GHz
-        -Velocidad Máxima: 4.50 GHz
-        -Numero de núcleos: 6
-        -Numero de subprocesos: 12
-        -Arquitectura: Coffe Lake H (64 bits)
-        -Set de instrucciones: MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, EM64T, VT-X, AES, AVX, AVX2, FMA3
+- Marca/Modelo: Intel Core i7-9750H
+- Velocidad Base: 2.60 GHz
+- Velocidad Máxima: 4.50 GHz
+- Numero de núcleos: 6
+- Numero de subprocesos: 12
+- Arquitectura: Coffe Lake H (64 bits)
+- Set de instrucciones: MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, EM64T, VT-X, AES, AVX, AVX2, FMA3
 
 Tamaño de las cachés del procesador
-       -L1d: 32KB  
-       -L1i: 32KB  
-       -L2: 256KB   
-       -L3: 12288KB
+- L1d: 32KB  
+- L1i: 32KB  
+- L2: 256KB   
+- L3: 12288KB
 
 Memoria
-       -Total: 16 GB
-       -Tipo memoria: DDR4-2667, LPDDR3-2133
-       -Velocidad 2666 MHz
-       -Numero de (SO)DIMM: 6
+- Total: 16 GB
+- Tipo memoria: DDR4-2667, LPDDR3-2133
+- Velocidad 2666 MHz
+- Numero de (SO)DIMM: 6
       
 Tarjeta Gráfica
-       -Marca / Modelo: Nvidia GeForce GTX 1660 Ti Max-Q
-       -Memoria dedicada: 6 GB
-       -Resolución: 1920 x 1080
+- Marca / Modelo: Nvidia GeForce GTX 1660 Ti Max-Q
+- Memoria dedicada: 6 GB
+- Resolución: 1920 x 1080
       
 Disco 1:
-       - Marca: Toshiba
-       - Tipo: SSD
-       - Tamaño: 128 GB
-       - Particiones: 4
-       - Sistema de archivos: NTFS
+- Marca: Toshiba
+- Tipo: SSD
+- Tamaño: 128 GB
+- Particiones: 4
+- Sistema de archivos: NTFS
       
 Disco 2:
-       -Marca: Western Digital
-       -Tipo: SATA 3
-       -Tamaño: 1TB
-       -Sistema de archivos: NTFS
+- Marca: Western Digital
+- Tipo: SATA 3
+- Tamaño: 1TB
+- Sistema de archivos: NTFS
 
 Dirección MAC de la tarjeta wifi: 5C-3A-45-A0-52-15
 
