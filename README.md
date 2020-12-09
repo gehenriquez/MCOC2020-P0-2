@@ -7,7 +7,7 @@ Tipo: Notebook
 
 Año adquisición: 2020
 
-Procesador: 
+Procesador:
         -Marca/Modelo: Intel Core i7-9750H
         -Velocidad Base: 2.60 GHz
         -Velocidad Máxima: 4.50 GHz
@@ -34,11 +34,11 @@ Tarjeta Gráfica
        -Resolución: 1920 x 1080
       
 Disco 1:
-       -Marca: Toshiba
-       -Tipo: SSD
-       -Tamaño: 128 GB
-       -Particiones: 4
-       -Sistema de archivos: NTFS
+       - Marca: Toshiba
+       - Tipo: SSD
+       - Tamaño: 128 GB
+       - Particiones: 4
+       - Sistema de archivos: NTFS
       
 Disco 2:
        -Marca: Western Digital
