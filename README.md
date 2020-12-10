@@ -73,6 +73,7 @@ Proveedor internet: roma-penuelas-lapaloma.wifixtreme.cl
 
 Con el fin de evaluar el rendimiento de la multiplicacion de matrices desarrollado por python (A@B), se elaboró una función que multiplica matrices y se compararon los desempeños de ambas. La función mimatmul((A, B, C) utilizada se muestra a continuación:
 
+```
 def mimatmul(A, B, C):
         N=len(A)
         for m in range(N):
@@ -80,7 +81,7 @@ def mimatmul(A, B, C):
                         for k in range(N):
                                 C[m][j] += A[m][k] * B[k][j]
         return C
-
+```
 
 Lo primero que se observa es que la función de elaboración propia tarda más tiempo en resolver la multiplicacion de matrices pero utilizan la misma memoria para matrices del mismo tamaño. Producto de esta diferencia en los tiempos, se decide usar dos listas de tamaños de matrices, Ns1 = [2, 5, 10, 12, 15, 20, 30, 40, 45, 50, 55, 125, 160, 200, 250, 350, 500, 600, 800, 1000, 2000, 5000, 10000] y Ns2 = [10, 20, 50, 100, 500, 1000]. El archivo timing_matmul.py es capaz de correr Ns1 y Ns2, tardando no más de 10 min en las 10 corridas, en cambio el archivo mimatmul.py no puede correr Ns1, tras varias horas de correrlo el computador colapso y no entrego los resultados. A continuacion se muestran los Graficos de memoria y tiempo vs tamaño de matrices, para timing_matmul.py con las listas Ns1 y Ns2, y para mimatmul.py se entrega solo con la lista Ns2. 
 
