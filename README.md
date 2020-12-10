@@ -73,9 +73,9 @@ Proveedor internet: roma-penuelas-lapaloma.wifixtreme.cl
 
 Con el fin de evaluar el rendimiento de la multiplicacion de matrices desarrollado por python (A@B), se elaboró una función que multiplica matrices y se compararon los desempeños de ambas. La función mimatmul((A, B, C) utilizada se muestra a continuación:
 
->def mimatmul(A, B, C):
-      N=len(A)
-      for m in range(N):
+<def mimatmul(A, B, C):
+<      N=len(A)
+<      for m in range(N):
             for j in range(N):
                   for k in range(N):
                         C[m][j] += A[m][k] * B[k][j]
