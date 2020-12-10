@@ -83,7 +83,7 @@ def mimatmul(A, B, C):
         return C
 ```
 
-Lo primero que se observa es que la función de elaboración propia tarda más tiempo en resolver la multiplicacion de matrices pero utilizan la misma memoria para matrices del mismo tamaño. Producto de esta diferencia en los tiempos, se decide usar dos listas de tamaños de matrices, Ns1 = [2, 5, 10, 12, 15, 20, 30, 40, 45, 50, 55, 125, 160, 200, 250, 350, 500, 600, 800, 1000, 2000, 5000, 10000] y Ns2 = [10, 20, 50, 100, 500, 1000]. El archivo timing_matmul.py es capaz de correr Ns1 y Ns2, tardando no más de 10 min en las 10 corridas, en cambio el archivo mimatmul.py no puede correr Ns1, tras varias horas de correrlo el computador colapso y no entrego los resultados. A continuacion se muestran los Graficos de memoria y tiempo vs tamaño de matrices, para timing_matmul.py con las listas Ns1 y Ns2, y para mimatmul.py se entrega solo con la lista Ns2. 
+Lo primero que se observa es que la función de elaboración propia tarda más tiempo en resolver la multiplicacion de matrices pero utilizan la misma memoria para matrices del mismo tamaño. Producto de esta diferencia en los tiempos, se decide usar dos listas de tamaños de matrices, Ns1 = [2, 5, 10, 12, 15, 20, 30, 40, 45, 50, 55, 125, 160, 200, 250, 350, 500, 600, 800, 1000, 2000, 5000, 10000] y Ns2 = [10, 20, 50, 100, 500, 1000]. El archivo timing_matmul.py es capaz de correr Ns1 y Ns2, tardando no más de 10 min en las 10 corridas, en cambio el archivo mimatmul.py no puede correr Ns1, tras varias horas de correrlo el computador colapso y no entrego los resultados (para Ns2 se demoro un tiempo de 9 horas aprox). A continuacion se muestran los graficos de memoria y tiempo vs tamaño de matrices, para timing_matmul.py con las listas Ns1 y Ns2, y para mimatmul.py se entrega solo con la lista Ns2. 
 
 ![Plot-timing_matmul-Ns1](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%202/CPU-10-corrida.2.PNG)
 
@@ -91,7 +91,9 @@ Lo primero que se observa es que la función de elaboración propia tarda más t
 
 ![Plot-mimatmul-Ns2](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%202/CPU-10-corrida.2.PNG)
 
-Además se observo en el archivo mimatmul.py, que los tiempos al pasar de matrices de 100 elementos a matrices de 500 elementos aumenta de manera brusca. Para N=100 se utilizan 0.9144420000000001 s y 240000 bytes de memoria, al cambiar a matrices de N=500 se demora 113.51358339999999 s y se necesitan 6000000 bytes. Esto podria ocurrir producto de la memoria requerida, de hecho al observar el segundo grafico se ve como aumenta para todas las multiplicaciones el uso de memoria. Al requerir mas memoria es probable que el procesador no sea capaz de suplir la demanda de memoria de manera dinamica y requiera utilizar mas RAM o en su defecto memoria de disco, por medio de archivos de paginacion. Se muestra tambien los procesadores logicos para los tres escenarios mencionados anteriormente.
+- Esta diferencia entre los tiempos requeridos para la multiplicación entre mimatmul, y la multiplicacion "@" de numpy se produce porque el codigo en mimatmul no es optimo, además de estar escrito en python, un lenguaje mas cercano al usuario que al programa, por lo que se pierde tiempo interpretando. Los lenguajes de bajo nivel permiten mejores rendimientos y la libreria numpy debe estar escrita en un lenguaje de nivel mas bajo. 
+
+- Además se observo en el archivo mimatmul.py, que los tiempos al pasar de matrices de 100 elementos a matrices de 500 elementos aumenta de manera brusca. Para N=100 se utilizan 0.9144420000000001 s y 240000 bytes de memoria, al cambiar a matrices de N=500 se demora 113.51358339999999 s y se necesitan 6000000 bytes. Esto podria ocurrir producto de la memoria requerida, de hecho al observar el segundo grafico se ve como aumenta para todas las multiplicaciones el uso de memoria. Al requerir mas memoria es probable que el procesador no sea capaz de suplir la demanda de memoria de manera dinamica y requiera utilizar mas RAM o en su defecto memoria de disco, por medio de archivos de paginacion. Se muestra tambien los procesadores logicos para los tres escenarios mencionados anteriormente.
 
 ![CPU-timing_matmul-Ns1](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%202/CPU-10-corrida.2.PNG)
 
@@ -100,9 +102,6 @@ Además se observo en el archivo mimatmul.py, que los tiempos al pasar de matric
 ![CPU-mimatmul-Ns2](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%202/CPU-10-corrida.2.PNG)
 
 Además se subieron los archivos "timing_matmul.py", "mimatmul.py", los archivos "matmul{n}.txt" y "mimatmul{n}.txt" para los 10 archivos de texto (n con valores entre 0 y 9). Todo se desarrollo utilizando la version de python 3.8.5 y la version de numypy 1.19.1.
-
-
-
 
 # Desempeño Ax = b :
 - Para matrices de pequeños tamaños el solver que utiliza menos tiempo es el de numpy, para matrices de menos de 10x10. 
