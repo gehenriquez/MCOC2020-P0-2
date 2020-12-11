@@ -106,6 +106,37 @@ Además se subieron los archivos "timing_matmul.py", "mimatmul.py", los archivos
 
 # Desempeño linalg.inv:
 
+A partir de las funciones numpy.linalg.inv  y scipy.linalg.inv se calcularon las inversas de las matrices laplacianas creadas por la función mostrada a continuación (utilizando valores de tipo np.half, np.single, np.double y np.longdouble):
+```
+def matriz_laplaciana(n):
+    A = np.zeros([n,n], dtype = np.** correspondiente em cada caso**)
+    for i in range(n) :
+        for j in range(n) :
+            if i == j :
+                A[i][j] = 2
+            elif i == (j+1) or j == (i+1):
+                A[i][j] = -1
+    return A
+```
+Se analiza el desempeño de estas funciones para tamaños crecientes de matrices por medio de los siguientes graficos.
+
+- Para el caso 1, la función numpy.linalg.inv no soporta datos del tipo np.half o np.longdouble, por lo que solo se muestran los graficos para np.single y np.double, respectivamente.
+
+![Plot-numpy.linalg.inv-np.single](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-numpy.linalg.inv-np.single.png)
+![Plot-numpy.linalg.inv-np.double](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-numpy.linalg.inv-np.double.png)
+
+- Para el caso 2:
+![Plot-scipy.linalg.inv-overwrite_a=False-np.half](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-scipy.linalg.inv-overwrite_a%3DFalse-np.half.png)
+![Plot-scipy.linalg.inv-overwrite_a=False-np.single](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-scipy.linalg.inv-overwrite_a%3DFalse-np.single.png)
+![Plot-scipy.linalg.inv-overwrite_a=False-np.double](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-scipy.linalg.inv-overwrite_a%3DTrue-np.double.png)
+![Plot-scipy.linalg.inv-overwrite_a=False-np.longdouble](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-scipy.linalg.inv-overwrite_a%3DFalse-np.longdouble.png)
+
+- Para el caso 3:
+![Plot-scipy.linalg.inv-overwrite_a=True-np.half](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-scipy.linalg.inv-overwrite_a%3DTrue-np.half.png)
+![Plot-scipy.linalg.inv-overwrite_a=True-np.single](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-scipy.linalg.inv-overwrite_a%3DTrue-np.single.png)
+![Plot-scipy.linalg.inv-overwrite_a=True-np.double](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-scipy.linalg.inv-overwrite_a%3DTrue-np.double.png)
+![Plot-scipy.linalg.inv-overwrite_a=True-np.longdouble](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-scipy.linalg.inv-overwrite_a%3DTrue-np.longdouble.png)
+
 
 
 # Desempeño Ax = b :
