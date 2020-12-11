@@ -137,7 +137,9 @@ Se analiza el desempeño de estas funciones para tamaños crecientes de matrices
 ![Plot-scipy.linalg.inv-overwrite_a=True-np.double](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-scipy.linalg.inv-overwrite_a%3DTrue-np.double.png)
 ![Plot-scipy.linalg.inv-overwrite_a=True-np.longdouble](https://github.com/gehenriquez/MCOC2020-P0-2/blob/master/Entrega%204/Plot-scipy.linalg.inv-overwrite_a%3DTrue-np.longdouble.png)
 
-
+- Al comparar los graficos obtenidos se aprecia que el utilizar overwrite_a=True de scipy.linalg.inv significa en un mejor desempeño en cuanto a la memoria requerida, pero en cuanto al tiempo utilizado no se observa una ganancia notoria. 
+- Este metodo utiliza la matriz identidad y la factorización LU para obtener la inversa de A.
+- El paralelismo permite repartir las tareas a diferentes hilos y asi optimizar los calculos, permite que los procesadores trabajen a menor intensidad, pero en conjunto. 
 
 # Desempeño Ax = b :
 - Para matrices de pequeños tamaños el solver que utiliza menos tiempo es el de numpy, para matrices de menos de 10x10. 
