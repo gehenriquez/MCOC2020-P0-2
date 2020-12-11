@@ -176,6 +176,7 @@ Además es interesante la variacion en el rendimiento del solve spSolve symmetri
 - Se aprecia una gran estabilidad, podriamos mdecir que es el metodo ams estable. 
 
 ## El codigo para las laplacianas es mostrado a continuación:
+```
 import numpy as np
 from scipy.sparse import lil_matrix, csc_matrix
 
@@ -194,6 +195,6 @@ def matriz_laplaciana_dispersa(n, t=np.double):
             if (i + 1) == j or (i - 1) == j:
                 a[i, j] = t(- 1)
     return csc_matrix(a)
-    
+```    
 - Este codigo es un factor que influye en los resultados, ya que es necesario y se utiliuza en todos los casos y metodos, al hacer una buena seleccion de la funcion laplaciana a utilizar se puede optimizar el tiempo utilizado y ver un aumento en el desempeño del programa. 
 
