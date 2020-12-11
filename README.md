@@ -146,8 +146,8 @@ Se analiza el desempeño de estas funciones para tamaños crecientes de matrices
 - Para tamaños grandes tambien es mas conveniente usar el solver de numpy considerando el tiempo que utiliza, a partir de matrices de tamaño 1000x1000 o mas.
 - Para tamaños de N entre 10 y 200 el que requiere menos tiempo es el solver de scipy symmetric y para tamaños de N entre 200 a 1000 el que menos tiempo utiliza para resolver es el solver de scipy pos overwrite.
 - se observa una gran variacion de los desempeños de los diferentes solvers a medida que cambian los tamaños de matrices, pero al llegar a matrices de 1000x1000 se empiezan a comportar de manera relativamente parecida.
-- Es dificil determinar cual es el con peor desempeño, pero po lo general es el solver de scipy solve.
-Además es interesante la variacion en el rendimiento del solve spSolve symmetric, ya que varia significativamente en comparacion a lops demas al cambiar los tamaños dew matrices.
+- Es dificil determinar cual es el con peor desempeño, pero por lo general es el solver de scipy solve.
+Además es interesante la variacion en el rendimiento del solve spSolve symmetric, ya que varia significativamente en comparacion a los demas al cambiar los tamaños de matrices.
 
 # Matrices dispersas y complejidad computacional :
 
@@ -163,17 +163,17 @@ Además es interesante la variacion en el rendimiento del solve spSolve symmetri
 ![Para SOLVE llena](https://github.com/gehenriquez/MCOC2020-P0/blob/master/Entrega%207/Solve_llena.png)
 ![Para SOLVE dispersa](https://github.com/gehenriquez/MCOC2020-P0/blob/master/Entrega%207/Solve_dispersa.png)
 
-- En general se observa que para Solve que para la matriz llena los tiemposde ensamblaje y solucion aumentan considerablemente al aumentar el tamaño de N. En cambio para las matrices dispersas se observa que al aumentar el tamaño de N, el tiempo de ensamblaje aumenta en gran emdida, pero el de solucion no lo hace.
+- En general se observa que para Solve que para la matriz llena los tiempos de ensamblaje y solucion aumentan considerablemente al aumentar el tamaño de N. En cambio para las matrices dispersas se observa que al aumentar el tamaño de N, el tiempo de ensamblaje aumenta en gran medida, pero el de solucion no lo hace.
 - Extrañamente el tiempo que se demora en ensamblar y en resolver una matriz llena parece ser menor que el requerido para una dispersa. 
-- Se aprecia una buena estabilidad en las corridas por lo general, aunque para las matrices llenas, en el tiempo de solicion se ven varios puntos que se escapan de la linea esperada.
+- Se aprecia una buena estabilidad en las corridas por lo general, aunque para las matrices llenas, en el tiempo de solucion se ven varios puntos que se escapan de la linea esperada.
 
 3- Complejidad algoritmica de INV:
 ![Para INV llena](https://github.com/gehenriquez/MCOC2020-P0/blob/master/Entrega%207/INV_llena.png)
 ![Para INV dispersa](https://github.com/gehenriquez/MCOC2020-P0/blob/master/Entrega%207/INV_disperesa.png)
 
-- Para el caso de INV, se aprecia que los tiempos no aumentan tanto como en los otros casos al trabajar con amtrices mas grandes, para ninguno de los casos. Se observa mas pendiente en las matrices llenas y mas aun en el tiempo de solucion que en el de ensamblaje, pero sigue siendo menor que para los otros metodos. 
+- Para el caso de INV, se aprecia que los tiempos no aumentan tanto como en los otros casos al trabajar con matrices mas grandes, para ninguno de los casos. Se observa mas pendiente en las matrices llenas y mas aun en el tiempo de solucion que en el de ensamblaje, pero sigue siendo menor que para los otros metodos. 
 - Extrañamente el tiempo que se demora en ensamblar y en resolver una matriz llena parece ser menor que el requerido para una dispersa. 
-- Se aprecia una gran estabilidad, podriamos mdecir que es el metodo ams estable. 
+- Se aprecia una gran estabilidad, podriamos decir que es el metodo mas estable. 
 
 ## El codigo para las laplacianas es mostrado a continuación:
 ```
@@ -196,5 +196,5 @@ def matriz_laplaciana_dispersa(n, t=np.double):
                 a[i, j] = t(- 1)
     return csc_matrix(a)
 ```    
-- Este codigo es un factor que influye en los resultados, ya que es necesario y se utiliuza en todos los casos y metodos, al hacer una buena seleccion de la funcion laplaciana a utilizar se puede optimizar el tiempo utilizado y ver un aumento en el desempeño del programa. 
+- Este codigo es un factor que influye en los resultados, ya que es necesario y se utiliza en todos los casos y metodos, al hacer una buena seleccion de la funcion laplaciana a utilizar se puede optimizar el tiempo utilizado y ver un aumento en el desempeño del programa. 
 
