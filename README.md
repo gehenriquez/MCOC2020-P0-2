@@ -104,6 +104,10 @@ Lo primero que se observa es que la función de elaboración propia tarda más t
 
 Además se subieron los archivos "timing_matmul.py", "mimatmul.py", los archivos "matmul{n}.txt" y "mimatmul{n}.txt" para los 10 archivos de texto (n con valores entre 0 y 9). Todo se desarrollo utilizando la version de python 3.8.5 y la version de numypy 1.19.1.
 
+# Desempeño linalg.inv:
+
+
+
 # Desempeño Ax = b :
 - Para matrices de pequeños tamaños el solver que utiliza menos tiempo es el de numpy, para matrices de menos de 10x10. 
 - Para tamaños grandes tambien es mas conveniente usar el solver de numpy considerando el tiempo que utiliza, a partir de matrices de tamaño 1000x1000 o mas.
